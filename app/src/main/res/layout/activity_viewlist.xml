@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        tools:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:id="@+id/taskLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="List Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/listNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/taskNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="New Task"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/addTaskBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameText"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete List"
+        app:layout_constraintTop_toBottomOf="@+id/saveBtn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/addTaskBtn"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
